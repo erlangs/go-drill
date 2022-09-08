@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"log"
 
-	_ "github.com/pinpt/go-drill"
+	_ "github.com/erlangs/go-drill"
 )
 
 func main() {

@@ -25,6 +25,10 @@ func newResult(r io.Reader) (driver.Rows, error) {
 	if err := gojay.UnmarshalJSONObject(buf, &theresult); err != nil {
 		return nil, err
 	}
+
+	if theresult.rows == nil {
+		return nil, fmt.Errorf("no data")
+	}
 	return theresult.rows, nil
 }
 
